@@ -8,6 +8,6 @@
 
 import UIKit
 
-let colorPink = UIColor(displayP3Red: 247, green: 195, blue: 208, alpha: 1)
-
+let MainURL = "https://jsonplaceholder.typicode.com/photos"
+let lightBlueColor = UIColor(displayP3Red: 62, green: 195, blue: 218, alpha: 1)
 

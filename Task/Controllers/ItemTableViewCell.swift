@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ItemTableViewCell: UITableViewCell {
     
@@ -23,13 +24,31 @@ class ItemTableViewCell: UITableViewCell {
         setStyle()
     }
     
-    func configureCellWith() {
-        
+    func configureCellWith(ItemData : PhotoItem , isSelected : Bool = false , isFiltering : Bool = false) {
+        if let photoUrl = URL(string: ItemData.thumbnailUrl) //ItemData.thumbnailUrl
+        {
+            itemPhotoImageView.sd_setImage(with: photoUrl, completed: nil)
+        }
+        titleLabel.text = ItemData.title
+        albumIdLabel.text = "\(ItemData.albumId ?? 0)"
+        if isFiltering {
+            selectItemImageView.isHidden = true
+        }else{
+            selectItemImageView.image = isSelected ? #imageLiteral(resourceName: "select") : #imageLiteral(resourceName: "Unselect")
+        }
     }
+    
     func setStyle()
     {
         itemPhotoImageView.layer.cornerRadius = 7
     }
     
+    func getCellSelected(toSelect : Bool)  {
+        if toSelect {
+            selectItemImageView.image = #imageLiteral(resourceName: "select")
+        }else{
+            selectItemImageView.image = #imageLiteral(resourceName: "Unselect")
+        }
+    }
     
 }

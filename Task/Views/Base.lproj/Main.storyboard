@@ -58,21 +58,21 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJs-2N-WDU">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="jlT-uE-U7L">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jlT-uE-U7L">
                                                             <rect key="frame" x="15" y="14.5" width="125" height="70"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="70" id="GIP-nq-H4j"/>
                                                                 <constraint firstAttribute="width" constant="125" id="cNL-gZ-qco"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="lX4-PS-QoO">
-                                                            <rect key="frame" x="154" y="23" width="27.5" height="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="lX4-PS-QoO">
+                                                            <rect key="frame" x="154" y="20" width="27.5" height="17"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Nxp-Yz-Bl1">
-                                                            <rect key="frame" x="154" y="45" width="69.5" height="21"/>
+                                                            <rect key="frame" x="154" y="42" width="69.5" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -88,13 +88,13 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="jlT-uE-U7L" firstAttribute="centerY" secondItem="hJs-2N-WDU" secondAttribute="centerY" id="1mh-ra-KWn"/>
-                                                        <constraint firstItem="Nxp-Yz-Bl1" firstAttribute="top" secondItem="lX4-PS-QoO" secondAttribute="top" constant="22" id="2bT-QG-cA8"/>
+                                                        <constraint firstItem="Nxp-Yz-Bl1" firstAttribute="top" secondItem="lX4-PS-QoO" secondAttribute="bottom" constant="5" id="DWZ-hu-EIx"/>
                                                         <constraint firstItem="vhF-Ts-Z3I" firstAttribute="centerY" secondItem="hJs-2N-WDU" secondAttribute="centerY" id="Dym-Ay-4C0"/>
                                                         <constraint firstItem="lX4-PS-QoO" firstAttribute="leading" secondItem="jlT-uE-U7L" secondAttribute="trailing" constant="14" id="F4I-hg-Z0I"/>
                                                         <constraint firstItem="jlT-uE-U7L" firstAttribute="leading" secondItem="hJs-2N-WDU" secondAttribute="leading" constant="15" id="Tba-9C-CDR"/>
                                                         <constraint firstItem="vhF-Ts-Z3I" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lX4-PS-QoO" secondAttribute="trailing" constant="12" id="c5w-T0-LIt"/>
                                                         <constraint firstItem="Nxp-Yz-Bl1" firstAttribute="leading" secondItem="lX4-PS-QoO" secondAttribute="leading" id="cMI-jR-FAI"/>
-                                                        <constraint firstItem="lX4-PS-QoO" firstAttribute="top" secondItem="hJs-2N-WDU" secondAttribute="top" constant="23" id="cRS-yD-LUr"/>
+                                                        <constraint firstItem="lX4-PS-QoO" firstAttribute="top" secondItem="hJs-2N-WDU" secondAttribute="top" constant="20" id="cRS-yD-LUr"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="vhF-Ts-Z3I" secondAttribute="trailing" constant="15" id="qNm-KJ-CDr"/>
                                                         <constraint firstItem="vhF-Ts-Z3I" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Nxp-Yz-Bl1" secondAttribute="trailing" constant="12" id="v0S-5p-hqt"/>
                                                     </constraints>
@@ -127,6 +127,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urI-ob-QNk">
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If3-jN-NTF">
                                 <rect key="frame" x="60" y="602" width="255" height="35"/>
                                 <color key="backgroundColor" red="0.92156862745098034" green="0.19215686274509802" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
@@ -137,6 +143,9 @@
                                 <state key="normal" title="Filter Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneButtonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kQm-tv-Uh6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -146,15 +155,18 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="If3-jN-NTF" secondAttribute="bottom" constant="30" id="5yA-t8-whF"/>
                             <constraint firstItem="lSJ-nl-Saj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DOG-Of-uA6"/>
                             <constraint firstItem="lSJ-nl-Saj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JTV-FD-RHq"/>
+                            <constraint firstItem="urI-ob-QNk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="P06-zv-NaD"/>
                             <constraint firstItem="If3-jN-NTF" firstAttribute="top" secondItem="lSJ-nl-Saj" secondAttribute="bottom" constant="10" id="PKj-P7-F5x"/>
-                            <constraint firstItem="If3-jN-NTF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bRC-7t-79a"/>
+                            <constraint firstItem="urI-ob-QNk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XcV-gJ-W5Y"/>
                             <constraint firstItem="If3-jN-NTF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="bbg-uq-IrG"/>
+                            <constraint firstItem="urI-ob-QNk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="u5u-cE-wle"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Check To Filter This List" id="DAE-Qm-HO9"/>
                     <connections>
                         <outlet property="DoneButton" destination="If3-jN-NTF" id="USZ-V4-7Cj"/>
+                        <outlet property="noDataLabel" destination="urI-ob-QNk" id="WZL-Vs-Sej"/>
                         <outlet property="tableView" destination="lSJ-nl-Saj" id="zbZ-6y-Dqt"/>
                     </connections>
                 </viewController>
@@ -165,6 +177,5 @@
     </scenes>
     <resources>
         <image name="Unselect" width="54" height="48"/>
-        <image name="test" width="175" height="91"/>
     </resources>
 </document>
