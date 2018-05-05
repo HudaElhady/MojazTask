@@ -38,7 +38,9 @@ class PhotosListViewController: UIViewController , UITableViewDataSource , UITab
             isFiltering = true
             navigationItem.title = "Filtered"
             DoneButton.isHidden = true
+            let index = IndexPath(row: 0, section: 0)
             tableView.reloadData()
+            tableView.scrollToRow(at: index, at: .top, animated: false)
         }
     }
     
@@ -82,7 +84,7 @@ class PhotosListViewController: UIViewController , UITableViewDataSource , UITab
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if !isFiltering
+        if !isFiltering , selectedPhotosIds.count < 10
         {
             if let cell = tableView.cellForRow(at: indexPath) as? ItemTableViewCell
             {
